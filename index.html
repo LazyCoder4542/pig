@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIG</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        div.pig {
+            /* base - 210px */
+            --width: 60vh;
+            width: var(--width);
+            aspect-ratio: 1/1;
+            background-color: #febfcb;
+            border: 5px solid black;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 14px 11px
+        }
+        .ears {
+            position: absolute;
+            width: 28%;
+            aspect-ratio: 1 / 1;
+            transform: translateY(-180.4%);
+            background-color: inherit;
+            border: inherit;
+            border-radius: inherit;
+            z-index: -1;
+        }
+        .ear1 {
+            rotate: -37.25deg;
+        }
+        .ear2  {
+            rotate: 37.25deg;
+        }
+        .eyes {
+            display: flex;
+            position: absolute;
+        }
+        .eyes > div {
+            width: calc(var(--width) * 0.2476);
+            aspect-ratio: 1/1;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transform: translateY(-69.23%);
+            border: 2px solid black;
+        }
+        .eyes > div:nth-child(1) {
+            rotate: -29deg;
+        }
+        .eyes > div:nth-child(2) {
+            rotate: 29deg;
+        }
+        .eyes > div > span {
+            background-color: black;
+            width: 44.23%;
+            border-radius: inherit;
+            aspect-ratio: inherit;
+        }
+        .nose {
+            border: 2px solid black;
+            width: 47.6%;
+            aspect-ratio: 1.5 / 1;
+            position: absolute;
+            transform: translateY(60%);
+            background-color: #e1687d;
+            border-radius: 40%/35%;
+            display: flex;
+            gap: 16%;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .nose > span {
+            width: 26%;
+            aspect-ratio: 1 / 1.15;
+            background-color: black;
+            display:  block;
+            border-radius: 50%
+        }
+    </style>
+</head>
+<body>
+    <div class="pig">
+        <div class="ears ear1"></div>
+        <div class="ears ear2"></div>
+        <div class="eyes">
+            <div>
+                <span></span>
+            </div>
+            <div>
+                <span></span>
+            </div>
+        </div>
+        <div class="nose">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
